@@ -1,0 +1,49 @@
+//Popescu Bogdan Stefan 312CAa 2023-2024
+Am impartit programul in mai multe functii pentru a usura atat modul in care
+programul e inteles cat si modul in care e construit.
+Functia de parsare va lua comanda citita de la tastatura si o va imparti in
+cuvinte intr-un vector de cuvinte si ne va da si numarul de parametri. Le voi
+folosi pentru a testa daca o comanda e valida sau nu.
+Functia de LOAD va incarca in memorie antetul si matricea de la fiecare imagine
+si va actualiza totodata si celelalte variabile ce depinde de poza, cum ar fi
+variabilele de selectie.
+Functia clamp aduce valoarea in intervalul dorit.
+Functia stoc aloca o zona de memorie pentru o matrice de m linii si n coloane.
+O vom apela de fiecare data cand vrem sa facem o copie pentru o matrice.
+Functia check_num verifica daca un string este, de fapt un numar, adica nu are
+deloc litere. Dupa, ca sa convertim in numere mai usor, ne folosim de functia
+atoi().
+Functia select va avea mai multe cazuri: atunci cand nu e valida comanda,
+afiseaza mesajul corespunzator, atunci cand are ca parametru ALL, stim sa
+selectam toti pixelii (de la 0 la numarul de linii/coloane), iar daca dam un
+interval anume vom verifica ca acesta sa fie valid (sa nu fie in afara
+matricei), dupa care vom actualiza coordonatele x1, x2, y1, y2.
+Functia checck_pow verifica daca un numar este sau nu putere a lui 2. Ne ajuta
+in cadrul functiei histogram.
+Functia histogram va afisa corespunzator histograma imaginii (doar alb negru)
+folosindu-se de un vector de frecventa si de formula data.
+Functia equalize se aplica si ea doar la imaginile alb negru si se va folosi
+de un vector de frecventa care va fi parcurs pentru fiecare pixel si dupa
+copiat in alta matrice. Matricea copie va inlocui matricea pozei dupa apelarea
+functiei.
+Functia swap interschimba doua valori.
+Pentru functia rotate am utilizat alte functii intermediare, anume o functie
+pentru rotirea la dreapta a unei imagini grayscale si alta functie pentru
+rotirea unei imagini color. Rotirea la dreapta este deja posibila, iar rotirea
+la stanga inseamna, de fapt, rotirea la dreapta de 3 ori.
+Functia apply se va folosi de o copie a matricei curente, in care va copia 
+initial pixelii ce nu pot fi modificati (margini si cei neselectati). Apoi va
+aplica formula matematica pentru fiecare operatie (ex. sharpen), pe fiecare
+grup de pixeli. Rezultatul devine un nou pixel ce va fi pus in copie. Copia
+va inlocui apoi matricea originala.
+Functia save va salva atat antetul schimbat (deoarece in functie de parametru
+salvam fie ascii fie binar, deci alt tip de poza), cat si matricea in sine. Ne
+folosim de operatiile cu fisiere pentru a obtine acest lucru.
+Functia exit se ocupa cu terminarea executiei programului dupa ce a eliberat
+toate resursele cu care am lucrat.
+Functia crop va lua pixelii selectati din matricea originala si ii va
+transfera intr-o matrice copie ce va deveni matricea curenta (dupa ce am
+eliberat, desigur, memoria). Vom actualiza totodata si celelalte variabile ce 
+depinde de matricea noastra, cum ar fi numarul de linii/coloane, variabilele de
+selectie etc.
+In functia main se va verifica ce comanda urmeazasa punem in executie.
