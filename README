@@ -46,4 +46,4 @@ transfera intr-o matrice copie ce va deveni matricea curenta (dupa ce am
 eliberat, desigur, memoria). Vom actualiza totodata si celelalte variabile ce 
 depinde de matricea noastra, cum ar fi numarul de linii/coloane, variabilele de
 selectie etc.
-In functia main se va verifica ce comanda urmeazasa punem in executie.
+In functia main se va verifica ce comanda urmeaza sa punem in executie.
